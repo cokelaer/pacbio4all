@@ -1,2 +1,3 @@
 # pacbio4all
-pacbio tools
+
+A container with some of the pacbio tools. In progress. 
