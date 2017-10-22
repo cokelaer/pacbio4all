@@ -75,6 +75,7 @@ From: ubuntu:17.04
     rm -rf workspace
     rm -rf distfile
 
+
 %environment
     export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
     export PATH=/usr/local/bin:$PATH
