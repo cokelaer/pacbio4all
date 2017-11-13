@@ -12,8 +12,6 @@ From: ubuntu:17.04
     AUTHOR thomas.cokelaer@pasteur.fr
     VERSION v1.0
 
-
-
 %help
 
     Welcome to Pacbio-dedicated container
@@ -25,13 +23,15 @@ From: ubuntu:17.04
     Usage: singularity exec pacbio.img samtools
 
     This container contains a bunch of executables related to pacbio analysis.
-    You can enter the conatiner as follows:
+    You can enter the container as follows:
 
        singularity shell name.img
 
     Executables are stored in /usr/local/bin
 
+    Or you can execute it using (for example to run blasr):
 
+        singularity run name.img blasr
 
 %post
 
@@ -85,4 +85,9 @@ From: ubuntu:17.04
 %environment
     export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
     export PATH=/usr/local/bin:$PATH
+
+%runscript
+    echo "Welcome to Pacbio-dedicated container"
+    echo "Author: Thomas Cokelaer, http://github.com/cokelaer/pacbio4all"
+    exec "$@"
 
