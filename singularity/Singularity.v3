@@ -48,6 +48,8 @@ From: ubuntu:17.04
     git clone https://github.com/PacificBiosciences/pitchfork.git
     cd pitchfork
     git reset --hard b7bdf01f12bbd43977f140923b0144d75c863348
+    # 14Nov2017
+    #git reset --hard a8fe31e731ae1795c626e9f3b5c8fec4f050c5d2
 
     export TMPBUILD=/usr/local/
     make PREFIX=$TMPBUILD samtools
@@ -64,6 +66,8 @@ From: ubuntu:17.04
     make PREFIX=$TMPBUILD falcon
     make PREFIX=$TMPBUILD world  # this should install many more packages
     # sbt and jre cannot be installed
+    make PREFIX=$TMPBUILD pbreports
+    make PREFIX=$TMPBUILD pbcommand
 
     #
     #cp -r $TMPBUILD/* /usr/local/
